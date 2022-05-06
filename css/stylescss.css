@@ -388,3 +388,10 @@ Yellow dcfa51
 	height: 20px;
 	background-color: purple;
 }
+.breakoutBall {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: red;
+}

@@ -2,8 +2,9 @@ const grid = document.querySelector('.breakoutGrid')
 const blockWidth = 100
 const blockHeight = 20
 const userStart = [230, 10]
-let currentposition = userStart
-
+let userCurrentPosition = userStart
+const ballStart = [270,40]
+let ballCurrentPosition = ballStart
 class Block {
     constructor(xAxis, yAxis) {
         this.bottomLeft = [xAxis, yAxis]
@@ -42,30 +43,41 @@ function addBlocks() {
 addBlocks()
 
 function drawUser() {
-    user.style.left = currentposition[0] + 'px'
-    user.style.bottom = currentposition[1] + 'px'
+    user.style.left = userCurrentPosition[0] + 'px'
+    user.style.bottom = userCurrentPosition[1] + 'px'
+}
+function drawBall() {
+    ball.style.left = ballCurrentPosition[0] + 'px'
+    ball.style.bottom = ballCurrentPosition[1] + 'px'
 }
 
 function moveUser(e) {
     switch (e.key) {
         case 'ArrowLeft':
-            if(currentposition[0]> 0){
-            currentposition[0] -= 10
+            if(userCurrentPosition[0]> 0){
+            userCurrentPosition[0] -= 10
             drawUser()
             }
             break;
         case 'ArrowRight':
-            if(currentposition[0]< 500)
-            currentposition[0] += 10
+            if(userCurrentPosition[0]< 500)
+            userCurrentPosition[0] += 10
             drawUser()
             break;
     }
 }
+// function moveBall(){
+    
+// }
 document.addEventListener('keydown',moveUser)
 const user = document.createElement('div')
 user.classList.add('breakoutUser')
-user.style.left = currentposition[0] + 'px'
-user.style.bottom = currentposition[1] + 'px'
+user.style.left = userCurrentPosition[0] + 'px'
+user.style.bottom = userCurrentPosition[1] + 'px'
 grid.appendChild(user)
 
+const ball = document.createElement('div')
+ball.classList.add('breakoutBall')
+drawBall()
+grid.appendChild(ball)
 
