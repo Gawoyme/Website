@@ -96,6 +96,21 @@ $('#portfolioModal3').on('show.bs.modal', function () {
     if (portfoliocontent !== null)
     portfoliocontent.innerHTML = htmlContent;
 })
+$('#portfolioModal4').on('show.bs.modal', function () {
+    const portfoliocontent = document.getElementById('portFolioModalContent4');
+    const elementListPhp = [
+        {
+            title: 'Snake',
+            keys: ['Java'],
+            images: ['snake1.PNG', 'snake2.PNG'],
+            description: `Jeu snake simple,le serpent est de couleur aléatoire et des pieges peuvent apparaitre`,
+            rendus: null
+        },
+    ]
+    let htmlContent = writePortfolioModal('php', elementListPhp);
+    if (portfoliocontent !== null)
+        portfoliocontent.innerHTML = htmlContent;
+})
 
 function writePortfolioModal(themeTitle, elementList) {
     let htmlString = `
