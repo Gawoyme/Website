@@ -87,13 +87,11 @@ function generateIconChoice(choice) {
 }
 function printResult(myResult){
     return `
-    <div class = "bannerContainer">
         <div class="banner">
             `+myResult+`
             <div class="banner-left"></div>
             <div class="banner-right"></div>
         </div>
-    </div>
     `
 }
 function getResult(computerChoice,userChoice) {

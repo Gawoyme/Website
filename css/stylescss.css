@@ -379,6 +379,7 @@ Yellow dcfa51
 }
 .breakoutBlock {
 	position: absolute;
+	border-radius: 5px;
 	width: 100px;
 	height: 20px;
 	background-color: blue;
@@ -388,11 +389,18 @@ Yellow dcfa51
 	width: 100px;
 	height: 20px;
 	background-color: purple;
+	border-radius: 25px;
 }
 .breakoutBall {
 	position: absolute;
 	width: 20px;
 	height: 20px;
 	border-radius: 10px;
-	background-color: red;
+	background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%); 
+}
+.breakoutScore {
+	position: absolute;
+	left: 250px;
+	bottom: 465px;
+	font-size: 25px;
 }
