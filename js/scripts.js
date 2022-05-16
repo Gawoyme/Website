@@ -107,7 +107,7 @@ $('#portfolioModal4').on('show.bs.modal', function () {
             rendus: null
         },
     ]
-    let htmlContent = writePortfolioModal('php', elementListPhp);
+    let htmlContent = writePortfolioModal('java', elementListPhp);
     if (portfoliocontent !== null)
         portfoliocontent.innerHTML = htmlContent;
 })
@@ -131,7 +131,6 @@ function writePortfolioModal(themeTitle, elementList) {
         htmlString += '<button type="button" data-bs-target="#carousel' + themeTitle + '" data-bs-slide-to=' + index + ' aria-current="true" aria-label="Slide' + index + '"></button>';
     }
     htmlString += `
-     
         </div> 
             <div class="carousel-inner">
                 <div class="carousel-item active">`;
