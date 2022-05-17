@@ -404,3 +404,8 @@ Yellow dcfa51
 	bottom: 465px;
 	font-size: 25px;
 }
+
+.initialA{
+	background-color: aquamarine; 
+	color:rgba(0, 0, 0, 0.25)
+}

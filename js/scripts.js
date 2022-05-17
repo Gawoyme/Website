@@ -56,45 +56,30 @@ $('#portfolioModal2').on('show.bs.modal', function () {
         {
             title: 'Breakout',
             keys: ['JS', 'HTML/CSS', 'Jquery'],
-            images: ['breakout1.PNG','breakout2.PNG'],
+            images: ['breakout1.PNG', 'breakout2.PNG'],
             description: `Le jeu classique Breakout `,
             rendus: null
         },
     ]
     let htmlContent = writePortfolioModal('js', elementListPhp);
     if (portfoliocontent !== null)
-    portfoliocontent.innerHTML = htmlContent;
+        portfoliocontent.innerHTML = htmlContent;
 })
 
 $('#portfolioModal3').on('show.bs.modal', function () {
     const portfoliocontent = document.getElementById('portFolioModalContent3');
     const elementListPhp = [
         {
-            title: 'Session de connection',
-            keys: ['Dart', 'Flutter', 'Firebase'],
-            images: ['dartconnection1.PNG','dartconnection2.PNG','dartconnection3.PNG'],
-            description: `Systeme de connection lié a une base de donnée Firebase, avec des conditions general à accepter lors de la premiere
-            connection `,
-            rendus: null
-        },
-        {
-            title: 'News sur Windows',
-            keys: ['Dart', 'Flutter', 'Fluent','API'],
-            images: ['dartnews1.PNG','dartnews2.PNG'],
-            description: `C'est une application sur Windows qui recupere, trie, et affiche les nouvelles recentes à partir d'un API`,
-            rendus: null
-        },
-        {
-            title: 'Hotels',
-            keys: ['Dart', 'Flutter'],
-            images: ['darthotels.PNG'],
-            description: `Une application vitrine d'hotel `,
+            title: 'Snake',
+            keys: ['Java'],
+            images: ['snake1.PNG', 'snake2.PNG'],
+            description: `Jeu snake simple,le serpent est de couleur aléatoire et des pieges peuvent apparaitre`,
             rendus: null
         },
     ]
-    let htmlContent = writePortfolioModal('dart', elementListPhp);
+    let htmlContent = writePortfolioModal('c', elementListPhp);
     if (portfoliocontent !== null)
-    portfoliocontent.innerHTML = htmlContent;
+        portfoliocontent.innerHTML = htmlContent;
 })
 $('#portfolioModal4').on('show.bs.modal', function () {
     const portfoliocontent = document.getElementById('portFolioModalContent4');
@@ -108,6 +93,52 @@ $('#portfolioModal4').on('show.bs.modal', function () {
         },
     ]
     let htmlContent = writePortfolioModal('java', elementListPhp);
+    if (portfoliocontent !== null)
+        portfoliocontent.innerHTML = htmlContent;
+})
+$('#portfolioModal5').on('show.bs.modal', function () {
+    const portfoliocontent = document.getElementById('portFolioModalContent5');
+    const elementListPhp = [
+        {
+            title: 'Snake',
+            keys: ['Java'],
+            images: ['snake1.PNG', 'snake2.PNG'],
+            description: `Jeu snake simple,le serpent est de couleur aléatoire et des pieges peuvent apparaitre`,
+            rendus: null
+        },
+    ]
+    let htmlContent = writePortfolioModal('python', elementListPhp);
+    if (portfoliocontent !== null)
+        portfoliocontent.innerHTML = htmlContent;
+})
+$('#portfolioModal6').on('show.bs.modal', function () {
+    const portfoliocontent = document.getElementById('portFolioModalContent6');
+    
+    const elementListPhp = [
+        {
+            title: 'Session de connection',
+            keys: ['Dart', 'Flutter', 'Firebase'],
+            images: ['dartconnection1.PNG', 'dartconnection2.PNG', 'dartconnection3.PNG'],
+            description: `Systeme de connection lié a une base de donnée Firebase, avec des conditions general à accepter lors de la premiere
+            connection `,
+            rendus: null
+        },
+        {
+            title: 'News sur Windows',
+            keys: ['Dart', 'Flutter', 'Fluent', 'API'],
+            images: ['dartnews1.PNG', 'dartnews2.PNG'],
+            description: `C'est une application sur Windows qui recupere, trie, et affiche les nouvelles recentes à partir d'un API`,
+            rendus: null
+        },
+        {
+            title: 'Hotels',
+            keys: ['Dart', 'Flutter'],
+            images: ['darthotels.PNG'],
+            description: `Une application vitrine d'hotel `,
+            rendus: null
+        },
+    ]
+    let htmlContent = writePortfolioModal('dart', elementListPhp);
     if (portfoliocontent !== null)
         portfoliocontent.innerHTML = htmlContent;
 })
@@ -134,11 +165,11 @@ function writePortfolioModal(themeTitle, elementList) {
         </div> 
             <div class="carousel-inner">
                 <div class="carousel-item active">`;
-    htmlString += writePortFolioBody(themeTitle, elementList[0].title, elementList[0].keys, elementList[0].images, elementList[0].description,elementList[0].rendus);
+    htmlString += writePortFolioBody(themeTitle, elementList[0].title, elementList[0].keys, elementList[0].images, elementList[0].description, elementList[0].rendus);
     htmlString += `</div>`
     for (let index = 1; index < elementList.length; index++) {
         htmlString += '<div class="carousel-item">'
-        htmlString += writePortFolioBody(themeTitle, elementList[index].title, elementList[index].keys, elementList[index].images, elementList[index].description,elementList[index].rendus);
+        htmlString += writePortFolioBody(themeTitle, elementList[index].title, elementList[index].keys, elementList[index].images, elementList[index].description, elementList[index].rendus);
         htmlString += `</div>`
     }
     htmlString += `
@@ -169,7 +200,6 @@ function writePortFolioElementHeader(ElementTitle) {
     </div>
     `;
 }
-
 function writePortFolioDescription(description, formattedTitle) {
     let htmlString = ` 
         <div class="tab-pane fade" id="navdescription`+ formattedTitle + `" role="tabpanel">
@@ -226,9 +256,9 @@ function writePortFolioRendu(rendus, formattedTitle) {
     </div>`
     }
     return htmlString
-    
+
 }
-function writePortFolioTabPanel(key, imgs, description,rendus, formattedTitle, themeTitle) {
+function writePortFolioTabPanel(key, imgs, description, rendus, formattedTitle, themeTitle) {
     let htmlString = ` 
     <div class="tab" role="tabpanel">
         <div class="nav nav-tabs" id="nav-tab`+ formattedTitle + `" role="tablist">
@@ -237,11 +267,11 @@ function writePortFolioTabPanel(key, imgs, description,rendus, formattedTitle, t
                 <li class="presentation"> <a class="nav-link" data-bs-toggle="tab" data-bs-target="#navcarousel`+ formattedTitle + `" type="button" role="tab" aria-selected="true"><span><i class="fa fa-magnifying-glass fa-2xl"></i></span> <p>Aperçus </p></a></li>
                 <li class="presentation"> <a class="nav-link" data-bs-toggle="tab" data-bs-target="#navdescription`+ formattedTitle + `" type="button" role="tab" aria-selected="true"><span><i class="fa fa-clipboard fa-2xl"></i></span> <p>Description</p></a></li>
                 `
-                if (rendus !== null){
-                    htmlString += `
+    if (rendus !== null) {
+        htmlString += `
                     <li class="presentation disabled"> <a class="nav-link" data-bs-toggle="tab" data-bs-target="#navrendus`+ formattedTitle + `" type="button" role="tab" aria-selected="true"><span><i class="fa fa-hand-holding fa-2xl"></i></span> <p>Rendu</p></a></li>
                 `} else {
-                    htmlString += `<li class="presentation "> <a class="nav-link disabled" data-bs-toggle="tab" data-bs-target="" type="button" role="tab" aria-selected="true"><span><i class="fa fa-hand-holding fa-2xl"></i></span> <p>Rendu</p></a></li>
+        htmlString += `<li class="presentation "> <a class="nav-link disabled" data-bs-toggle="tab" data-bs-target="" type="button" role="tab" aria-selected="true"><span><i class="fa fa-hand-holding fa-2xl"></i></span> <p>Rendu</p></a></li>
                 `}
     htmlString += `
             </ul>
@@ -251,7 +281,7 @@ function writePortFolioTabPanel(key, imgs, description,rendus, formattedTitle, t
     htmlString += writePortfolioElementKeys(key, formattedTitle)
     htmlString += writePortfolioElementImgCarousel(imgs, formattedTitle, themeTitle)
     htmlString += writePortFolioDescription(description, formattedTitle)
-    htmlString += writePortFolioRendu(rendus,formattedTitle)
+    htmlString += writePortFolioRendu(rendus, formattedTitle)
     htmlString += '</div></div></div>'
     return htmlString
 }
@@ -270,7 +300,7 @@ function writePortfolioElementKeys(key, formattedTitle) {
     return htmlString;
 }
 
-function writePortFolioBody(themeTitle, elementTitle, key, imgs, description,rendus) {
+function writePortFolioBody(themeTitle, elementTitle, key, imgs, description, rendus) {
     var formattedTitle = elementTitle.replace(/\s+/g, '');
     let htmlString = `
     <div class="modal-body text-center pb-5">
@@ -279,7 +309,7 @@ function writePortFolioBody(themeTitle, elementTitle, key, imgs, description,ren
                 <div class="col-lg-8">
     `
     htmlString += writePortFolioElementHeader(elementTitle);
-    htmlString += writePortFolioTabPanel(key, imgs, description,rendus, formattedTitle, themeTitle);
+    htmlString += writePortFolioTabPanel(key, imgs, description, rendus, formattedTitle, themeTitle);
     htmlString += '</div></div></div>'
     return htmlString;
 }
@@ -343,15 +373,15 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 const elts = {
-	text1: document.getElementById("morphingtext1"),
-	text2: document.getElementById("morphingtext2")
+    text1: document.getElementById("morphingtext1"),
+    text2: document.getElementById("morphingtext2")
 };
 
 // The strings to morph between. You can change these to anything you want!
 const texts = [
-	"Developpeur WEB",
-	"Developpeur Mobile",
-	"Futur Ingenieur",
+    "Developpeur WEB",
+    "Developpeur Mobile",
+    "Futur Ingenieur",
 ];
 
 // Controls the speed of morphing.
@@ -367,64 +397,124 @@ elts.text1.textContent = texts[textIndex % texts.length];
 elts.text2.textContent = texts[(textIndex + 1) % texts.length];
 
 function doMorph() {
-	morph -= cooldown;
-	cooldown = 0;
-	
-	let fraction = morph / morphTime;
-	
-	if (fraction > 1) {
-		cooldown = cooldownTime;
-		fraction = 1;
-	}
-	
-	setMorph(fraction);
+    morph -= cooldown;
+    cooldown = 0;
+
+    let fraction = morph / morphTime;
+
+    if (fraction > 1) {
+        cooldown = cooldownTime;
+        fraction = 1;
+    }
+
+    setMorph(fraction);
 }
 
 // A lot of the magic happens here, this is what applies the blur filter to the text.
 function setMorph(fraction) {
-	// fraction = Math.cos(fraction * Math.PI) / -2 + .5;
-	
-	elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-	elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-	
-	fraction = 1 - fraction;
-	elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-	elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-	
-	elts.text1.textContent = texts[textIndex % texts.length];
-	elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+    // fraction = Math.cos(fraction * Math.PI) / -2 + .5;
+
+    elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+    elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+    fraction = 1 - fraction;
+    elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+    elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+    elts.text1.textContent = texts[textIndex % texts.length];
+    elts.text2.textContent = texts[(textIndex + 1) % texts.length];
 }
 
 function doCooldown() {
-	morph = 0;
-	
-	elts.text2.style.filter = "";
-	elts.text2.style.opacity = "100%";
-	
-	elts.text1.style.filter = "";
-	elts.text1.style.opacity = "0%";
+    morph = 0;
+
+    elts.text2.style.filter = "";
+    elts.text2.style.opacity = "100%";
+
+    elts.text1.style.filter = "";
+    elts.text1.style.opacity = "0%";
 }
 
 // Animation loop, which is called every frame.
 function animate() {
-	requestAnimationFrame(animate);
-	
-	let newTime = new Date();
-	let shouldIncrementIndex = cooldown > 0;
-	let dt = (newTime - time) / 1000;
-	time = newTime;
-	
-	cooldown -= dt;
-	
-	if (cooldown <= 0) {
-		if (shouldIncrementIndex) {
-			textIndex++;
-		}
-		
-		doMorph();
-	} else {
-		doCooldown();
-	}
+    requestAnimationFrame(animate);
+
+    let newTime = new Date();
+    let shouldIncrementIndex = cooldown > 0;
+    let dt = (newTime - time) / 1000;
+    time = newTime;
+
+    cooldown -= dt;
+
+    if (cooldown <= 0) {
+        if (shouldIncrementIndex) {
+            textIndex++;
+        }
+
+        doMorph();
+    } else {
+        doCooldown();
+    }
 }
 animate();
+var colors = new Array(
+    [62,35,255],
+    [60,255,60],
+    [255,35,98],
+    [45,175,230],
+    [255,0,255],
+    [255,128,0]);
+  
+  var step = 0;
+  //color table indices for: 
+  // current color left
+  // next color left
+  // current color right
+  // next color right
+  var colorIndices = [0,1,2,3];
+  
+  //transition speed
+  var gradientSpeed = 0.002;
+  
+  function updateGradient()
+  {
+    
+    if ( $===undefined ) return;
+    
+  var c0_0 = colors[colorIndices[0]];
+  var c0_1 = colors[colorIndices[1]];
+  var c1_0 = colors[colorIndices[2]];
+  var c1_1 = colors[colorIndices[3]];
+  
+  var istep = 1 - step;
+  var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+  var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+  var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+  var color1 = "rgb("+r1+","+g1+","+b1+")";
+  
+  var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+  var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+  var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+  var color2 = "rgb("+r2+","+g2+","+b2+")";
+  
+   $('#gradient').css({
+     background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+      background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+    
+    step += gradientSpeed;
+    if ( step >= 1 )
+    {
+      step %= 1;
+      colorIndices[0] = colorIndices[1];
+      colorIndices[2] = colorIndices[3];
+      
+      //pick two new target color indices
+      //do not pick the same as the current one
+      colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+      colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+      
+    }
+  }
+  
+  setInterval(updateGradient,10);
 
