@@ -137,6 +137,14 @@ $('#portfolioModal6').on('show.bs.modal', function () {
             description: `Une application vitrine d'hotel `,
             rendus: null
         },
+        {
+            title: 'Space shooter',
+            keys: ['Dart', 'Flutter','Flame'],
+            images: ['spaceshooter1.PNG','spaceshooter2.PNG'],
+            description: `Un jeu spaceshooter disponible à la fois sur mobile et sur le web, le jeu reste simple malgré une difficulté graduellement 
+            progressive en fonction du score `,
+            rendus: null
+        },
     ]
     let htmlContent = writePortfolioModal('dart', elementListPhp);
     if (portfoliocontent !== null)

@@ -1,0 +1,105 @@
+[data-initial='A'] {
+	background-color: rgba(255, 0, 0, 0.45);
+	color:rgba(255, 0, 0, 1);
+}
+[data-initial='B'] {
+	background-color: rgba(0, 255, 0, 0.3);
+	color:rgba(0, 255, 0, 1);
+}
+[data-initial='C'] {
+	background-color: rgba(0, 0, 255,0.45); 
+	color:rgba(0, 0, 255,1)
+}
+[data-initial='D'] {
+	background-color: rgba(0,255, 255,0.3); 
+	color:rgba(0,255, 255,1)
+}
+
+[data-initial='E']{
+	background-color: rgba(255,0,255,0.3); 
+	color:rgba(255,0,255,1)
+}
+[data-initial='F'] {
+	background-color: rgb(192,192,192); 
+	color:rgb(128,128,128)
+}
+[data-initial='G'] {
+	background-color: rgba(255,165,0,0.45); 
+	color:rgba(255,165,0,1)
+}
+[data-initial='H'] {
+	background-color: rgba(139,69,19,0.5); 
+	color:rgba(139,69,19,1)
+}
+[data-initial='I'] {
+	background-color: rgb(128,128,0,0.5); 
+	color:rgba(128,128,0, 1)
+}
+[data-initial='J'] {
+	background-color: rgb(128,0,128,0.5); 
+	color:rgba(128,0,128, 1)
+}
+[data-initial='K'] {
+	background-color: rgb(0,128,128,0.5); 
+	color:rgba(0,128,128, 1)
+}
+[data-initial='L'] {
+	background-color: rgb(128,0,0,0.5); 
+	color:rgba(128,0,0, 1)
+}
+[data-initial='M'] {
+	background-color: rgb(240,128,128,0.5); 
+	color:rgba(240,128,128, 1)
+}
+[data-initial='N'] {
+	background-color: rgb(255,69,0,0.5); 
+	color:rgba(255,69,0, 1)
+}
+[data-initial='O'] {
+	background-color: rgb(0,100,0,0.5); 
+	color:rgba(0,100,0, 1)
+}
+[data-initial='P'] {
+	background-color: rgb(210,105,30,0.5); 
+	color:rgba(210,105,30, 1)
+}
+[data-initial='Q'] {
+	background-color: rgb(255,105,180,0.5); 
+	color:rgba(255,105,180, 1)
+}
+[data-initial='R']{
+	background-color: rgb(255,20,147,0.5); 
+	color:rgba(255,20,147, 1)
+}
+[data-initial='S'] {
+	background-color: rgb(0,139,139,0.5); 
+	color:rgba(0,139,139, 1)
+}
+[data-initial='T']{
+	background-color: rgba(135,206,235,0.5); 
+	color:rgba(135,206,235, 1)
+}
+[data-initial='U'] {
+	background-color: rgb(148,0,211,0.5); 
+	color:rgba(148,0,211, 1)
+}
+[data-initial='V'] {
+	background-color: rgb(105,105,105,0.5); 
+	color:rgba(105,105,105, 1)
+}
+[data-initial='W'] {
+	background-color: rgb(188,143,143,0.5); 
+	color:rgba(188,143,143, 1)
+}
+[data-initial='X'] {
+	background-color: rgb(25,25,112,0.5); 
+	color:rgba(25,25,112, 1)
+}
+[data-initial='Y'] {
+	background-color: rgb(0,206,209,0.5); 
+	color:rgba(0,206,209, 1)
+}
+[data-initial='Z'] {
+	background-color: rgb(128,128,128); 
+	color:rgb(0,0,0)
+}
