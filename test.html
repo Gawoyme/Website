@@ -26,16 +26,25 @@
             <!-- player health -->
             <div style="position:relative;height: 30px;width:100% ;display:flex;justify-content: flex-end;">
                 <div style="background-color:yellow; height: 30px; width: 100%;"> </div>
-                <div id="playerHealthBar" style="background-color:red; position: absolute; top: 0; right: 0; bottom: 0;width: 100%;"> </div>
+                <div id="playerHealthBar"
+                    style="background-color:red; position: absolute; top: 0; right: 0; bottom: 0;width: 100%;"> </div>
             </div>
             <!-- timer -->
-            <div style="background-color:rgb(255, 72, 0); height: 100px; width: 100px; flex-shrink: 0;"> </div>
+            <div id ="timer" style="background-color:rgb(255, 72, 0); height: 100px; width: 100px; flex-shrink: 0; display:flex;align-items:center;justify-content: center;">
+                10
+            </div>
+
             <!-- enemy health -->
             <div style="position:relative;height: 30px;width:100%">
                 <div style="background-color:yellow; height: 30px; width: 100%;"> </div>
-                <div id="enemyHealthBar" style="background-color:blue; position: absolute; top: 0; right: 0; bottom: 0;left: 0; width: 100%;"> </div>
+                <div id="enemyHealthBar"
+                    style="background-color:blue; position: absolute; top: 0; right: 0; bottom: 0;left: 0; width: 100%;">
+                </div>
             </div>
         </div>
+        <div id ="displayText" style="position: absolute; color:white;
+        align-items: center;justify-content: center;
+        top:0;bottom: 0;left:0;right:0; display:none"></div>
         <canvas id="fighting_game"> </canvas>
     </div>
 
@@ -57,7 +66,9 @@
     <script src="js/scripts.js"></script>
     <script src="js/rockpaperscissors.js"></script>
     <script src="js/breakout.js"> </script>
-    <script src="js/fighting_game.js"> </script>
+    <script src="js/fighting_game/utils.js"> </script>
+    <script src="js/fighting_game/classes.js"> </script>
+    <script src="js/fighting_game/fighting_game.js"> </script>
 </body>
 
 </html>
